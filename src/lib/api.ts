@@ -10,7 +10,6 @@ const auth: Middleware = {
       request.headers.set('Authorization', `Bearer ${data.session.access_token}`)
       return request
     }
-    // Testing-only email-only login fallback (no Supabase session).
     const dev = readDevSession()
     if (dev) request.headers.set('Authorization', `Bearer ${dev.access_token}`)
     return request
