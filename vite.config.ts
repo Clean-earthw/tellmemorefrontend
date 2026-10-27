@@ -8,7 +8,7 @@ export default defineConfig({
   resolve: { alias: { '@': path.resolve(__dirname, 'src') } },
   server: {
     // ws: answers stream over a WebSocket under /api (see lib/answerStream.ts).
-    proxy: { '/api': { target: 'http://localhost:8000', ws: true } },
+    proxy: { '/api': { target: 'https://tellmemorebackend.vercel.app', ws: true } },
     // Phones reach the dev server through a Cloudflare tunnel (make tunnel).
     allowedHosts: ['.trycloudflare.com', '.lorebook.tech'],
   },
