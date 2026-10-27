@@ -10,6 +10,6 @@ export default defineConfig({
     // ws: answers stream over a WebSocket under /api (see lib/answerStream.ts).
     proxy: { '/api': { target: 'https://tellmemorebackend.vercel.app', ws: true } },
     // Phones reach the dev server through a Cloudflare tunnel (make tunnel).
-    allowedHosts: ['.trycloudflare.com', '.lorebook.tech'],
+    allowedHosts: ['.trycloudflare.com', '.lorebook.tech','.vercel.app'],
   },
 })
