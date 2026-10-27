@@ -18,7 +18,7 @@ const auth: Middleware = {
 }
 
 /** Typed client generated from FastAPI's OpenAPI spec. Run `make types` after backend changes. */
-export const api = createClient<paths>({ baseUrl: 'https://tellmemorebackend.vercel.app/' })
+export const api = createClient<paths>({ baseUrl: '' })
 api.use(auth)
 
 export type Schemas = components['schemas']
